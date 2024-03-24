@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(239, 239, 239);
+    align-items: center;
+}
+
+.header-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.logo {
+    font-family: "nunito";
+}
+
+.story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    background-color: rgb(239, 239, 239);
+    margin: 70px;
+    border-radius: 30px;
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 25px;
+}
