@@ -1,6 +1,3 @@
-stories = [["There was a small dog. He ate food.", "He all of a sudden felt sick", "But he went to the vet."], 
-["Anna watched her mom come home.", "She said lets go eat"]]
-
 let likes = []
 let seen = []
 let current_story_id = -1
@@ -40,7 +37,7 @@ function splitByEveryNthNewLine(text, n) {
 async function loadStoryAndUpdateUI() {
     try {
         const data = await getStory();
-        current_story = splitByEveryNthNewLine(data['content'], 20).filter(line => line !== "");
+        current_story = splitByEveryNthNewLine(data['content'], 10).filter(line => line !== "");
         storyElement.innerHTML = current_story[currPage];
         seen.push(data['id'])
         console.log("seen", seen)
@@ -90,7 +87,7 @@ function getStory() {
 
 document.addEventListener("keydown", function(e) {
 
-    if (e.keyCode == 68 && currPage < current_story.length - 1) {
+    if (e.keyCode === 68 && currPage < current_story.length - 1) {
         currPage++;
         storyElement.innerHTML = current_story[currPage];
     }
